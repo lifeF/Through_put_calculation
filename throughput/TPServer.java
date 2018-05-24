@@ -17,12 +17,12 @@ public class TPServer {
  			aSocket.receive(recievePacket);
 
 			if (i==0) {
-			  start = System.currentTimeMillis();              
+			  start = System.currentTimeMillis();
             }
             // System.out.println("Got packet "+i);
-        } catch (Exception e) {            
-            System.out.println("Socket: " + e.getMessage());            
-        } 
+        } catch (Exception e) {
+            System.out.println("Socket: " + e.getMessage());
+        }
         long delta = System.currentTimeMillis() - start;
         System.out.println("Throughput =" + 1000*COUNT/delta);
     }
